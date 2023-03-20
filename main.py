@@ -47,16 +47,20 @@ def handle_message(update, context):
         chat_id=update.effective_chat.id, text=response)
 
 
-# Create an Updater object with the Telegram bot token and use_context=True
-updater = Updater(
-    token=telegram_token, use_context=True)
+if __name__ == '__main__':
+    # Create an Updater object with the Telegram bot token and use_context=True
+    updater = Updater(
+        token=telegram_token, use_context=True)
 
-# Get the dispatcher to register handlers
-dispatcher = updater.dispatcher
+    # Get the dispatcher to register handlers
+    dispatcher = updater.dispatcher
 
-# Add a MessageHandler to handle text messages (not commands) using handle_message function
-dispatcher.add_handler(MessageHandler(
-    Filters.text & (~Filters.command), handle_message), group=0)
+    # Add a MessageHandler to handle text messages (not commands) using handle_message function
+    dispatcher.add_handler(MessageHandler(
+        Filters.text & (~Filters.command), handle_message), group=0)
 
-# Start the bot
-updater.start_polling()
+    # Start the bot
+    updater.start_polling()
+
+    # Print a message to indicate that the bot is running
+    print("WordMail bot is now running and listening for requests...")
