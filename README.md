@@ -5,7 +5,7 @@
 
 # WordMail
 
-WordMail is a Telegram bot that helps you generate formal emails with the help of OpenAI. Simply provide a short subject, and WordMail will create a professional email for you!
+WordMail is a python script that helps you generate formal emails with the help of OpenAI and Telegrom bots. Simply provide a short subject, and WordMail will create a professional email for you!
 
 
 ## Examples
